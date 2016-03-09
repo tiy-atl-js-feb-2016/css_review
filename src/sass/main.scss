@@ -1,0 +1,53 @@
+/* CSS Entry Point */
+
+$side-bar-width: 300px;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  width: 950px;
+  margin: auto;
+}
+
+header, footer {
+  background: darken(white, 5%);
+  padding: 50px;
+}
+
+aside {
+  float: left;
+  width: $side-bar-width;
+}
+
+main {
+  float: right;
+  width: calc(100% - #{$side-bar-width});
+}
+
+footer {
+  clear: both;
+}
+
+.price:before {
+  content: '$';
+}
+
+.item {
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+  width: 182px;
+  display: inline-block;
+
+  .item-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
